@@ -8,7 +8,7 @@ internal class Program
         Console.SetWindowSize(40, 30);
         Console.SetBufferSize(40, 30);
 
-        dot p1 = new dot();
+        Dot p1 = new Dot();
         p1.x = 2;
         p1.y = 3;
         p1.c = '*';

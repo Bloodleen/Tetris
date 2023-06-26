@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tetris
 {
-    class dot
+    public class Dot
     {
         public int x;
         public int y;
@@ -16,6 +16,17 @@ namespace Tetris
         {
             Console.SetCursorPosition(x, y);
             Console.Write(c);
+        }
+
+        public Dot(int a, int b, char sym)
+        {
+            x = a;
+            y = b;
+            c = sym;
+        }
+
+        public Dot()
+        { 
         }
     }
 }
