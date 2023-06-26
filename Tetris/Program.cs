@@ -8,12 +8,11 @@ internal class Program
         Console.SetWindowSize(40, 30);
         Console.SetBufferSize(40, 30);
 
-        Dot p1 = new Dot();
-        p1.x = 2;
-        p1.y = 3;
-        p1.c = '*';
-        p1.Draw();
+        Stick st = new Stick(3, 7, '*');
+        st.Draw();
 
+        Square s = new Square(2, 5, '*');
+        s.Draw();
 
         Console.ReadLine();
     }
