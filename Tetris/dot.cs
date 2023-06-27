@@ -25,8 +25,11 @@ namespace Tetris
             c = sym;
         }
 
-        public Dot()
-        { 
+        public void Hide()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(' ');
         }
+
     }
 }

@@ -18,5 +18,37 @@ namespace Tetris
             }
         }
 
+        public enum Direction
+        {
+            left = 1, right, down
+        }
+
+        public void Move(Direction dir)
+        {
+            foreach(Dot p in points)
+            {
+                switch (dir)
+                {
+                    case Direction.left:
+                        p.x -= 1; 
+                        break;
+                    case Direction.right:
+                        p.x += 1;
+                        break;
+                    case Direction.down: 
+                        p.y += 1; 
+                        break;
+                }
+            }
+        }
+
+        public void Hide()
+        {
+            foreach (Dot p in points)
+            {
+                p.Hide();
+            }
+        }
+
     }
 }

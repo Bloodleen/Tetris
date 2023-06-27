@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 using Tetris;
 
 internal class Program
@@ -8,20 +9,22 @@ internal class Program
         Console.SetWindowSize(40, 30);
         Console.SetBufferSize(40, 30);
 
-        Figure[] f = new Figure[2];
-        f[0] = new Square(2, 5, '*');
-        f[1] = new Stick(3, 7, '*');
+        Figure[] f = new Figure[1];
+        f[0] = new Square(20, 5, '*');
+        //f[1] = new Stick(3, 7, '*');
 
-        foreach(Figure fig in f)
+        foreach (Figure fig in f)
         {
             fig.Draw();
         }
 
-        //Stick st = new Stick(3, 7, '*');
-        //st.Draw();
+        Figure.Direction dir = Figure.Direction.right;
 
-        //Square s = new Square(2, 5, '*');
-        //s.Draw();
+        Thread.Sleep(3000);
+
+        f[0].Hide();
+        f[0].Move(dir);
+        f[0].Draw();
 
         Console.ReadLine();
     }
