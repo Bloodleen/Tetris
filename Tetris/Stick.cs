@@ -8,8 +8,7 @@ namespace Tetris
 {
     internal class Stick : Figure
     {
-        Dot[] points = new Dot[4];
-
+        
         public Stick(int x, int y, char sym)
         {
             int m = 0;
@@ -17,14 +16,6 @@ namespace Tetris
             {
                 points[i] = new Dot(x, y + m, sym);
                 m++;
-            }
-        }
-
-        public void Draw()
-        {
-            foreach (Dot p in points)
-            {
-                p.Draw();
             }
         }
 

@@ -8,7 +8,6 @@ namespace Tetris
 {
     internal class Square : Figure
     {
-        Dot[] points = new Dot[4];
         public Square(int x, int y, char sym)
         {
             points[0] = new Dot(x, y, sym);
@@ -17,13 +16,6 @@ namespace Tetris
             points[3] = new Dot(x + 1, y + 1, sym);
         }
 
-        public void Draw()
-        {
-            foreach(Dot p in points)
-            {
-                p.Draw();
-            }
-        }
     }
 
 }

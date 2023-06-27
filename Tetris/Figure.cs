@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Tetris
 {
-    internal class Figure
+    class Figure
     {
+        protected Dot[] points = new Dot[4];
 
+        public void Draw()
+        {
+            foreach (Dot p in points)
+            {
+                p.Draw();
+            }
+        }
 
     }
 }
