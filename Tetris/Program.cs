@@ -9,22 +9,20 @@ internal class Program
         Console.SetWindowSize(40, 30);
         Console.SetBufferSize(40, 30);
 
-        Figure[] f = new Figure[1];
-        f[0] = new Square(20, 5, '*');
-        //f[1] = new Stick(3, 7, '*');
+        FigureGenerator generator = new FigureGenerator(20, 0, '*');
 
-        foreach (Figure fig in f)
+        Figure s = generator.GetNewFigure();
+
+        s.Draw();
+
+        //s.Hide();
+        
+        while(true)
         {
-            fig.Draw();
+            s.MoveDown(Figure.Direction.down, s);
+            s = generator.GetNewFigure();
         }
 
-        Figure.Direction dir = Figure.Direction.right;
-
-        Thread.Sleep(3000);
-
-        f[0].Hide();
-        f[0].Move(dir);
-        f[0].Draw();
 
         Console.ReadLine();
     }

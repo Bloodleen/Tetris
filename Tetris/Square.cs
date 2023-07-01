@@ -16,6 +16,11 @@ namespace Tetris
             points[3] = new Dot(x + 1, y + 1, sym);
         }
 
+        public override void Rotate()
+        {
+
+        }
+
     }
 
 }
